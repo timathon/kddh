@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1632904601168,
+  "timestamp": 1632906492049,
   "index": "/kddh/index.html",
   "assetGroups": [
     {
@@ -60,7 +60,7 @@
     "/kddh/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/kddh/index.html": "b263c38c774573e425a14ba9748e73b96f2e3fa1",
     "/kddh/main.6163a1e484a814e0ed0b.js": "72114f3952ba599e4cddb3e2ffb196b03fd48c65",
-    "/kddh/manifest.webmanifest": "b029e4808121920e5034c399a9bcd4997800b3cb",
+    "/kddh/manifest.webmanifest": "64eab79faccdf39d67dec218538875b0f2339102",
     "/kddh/polyfills.d2c695292774112a06f8.js": "eb74e5eeaa3197b2317adf5a5ad599345360d91f",
     "/kddh/runtime.05e79306ce0f686addf4.js": "db1dbfb68d48d810329f6484b8deaf90a5690740",
     "/kddh/styles.562b72f0908078c47030.css": "a482461163a8f47da6b647530e2ee137e50329dc"
