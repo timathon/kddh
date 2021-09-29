@@ -1,4 +1,16 @@
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+snack-bar-container.mat-snack-bar-container.feedbackbar {
+  background-color: currentColor;
+  margin: auto;
+  width: 10em;
+  .mat-simple-snackbar {
+    justify-content: center;
+  }
+}

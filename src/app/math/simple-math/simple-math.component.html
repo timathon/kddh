@@ -1,0 +1,40 @@
+<!-- {{question | json}} -->
+<mat-card>
+  <form [formGroup]="questionForm" (ngSubmit)="onCheck()">
+    <button mat-mini-fab type="button" color="primary">{{question.numberA}}</button>
+    <button mat-icon-button type="button" color="accent">{{question.sign}}</button>
+    <button mat-mini-fab type="button" color="primary">{{question.numberB}}</button>
+    <button mat-icon-button type="button" color="accent">=</button>
+    <input #answer matInput placeholder="" formControlName="answer">
+    <span style="flex: 1 1 auto"></span>
+    <button type="submit" mat-raised-button color="primary">check</button>
+  </form>
+</mat-card>
+
+
+<!-- <form [formGroup]="editorForm" (ngSubmit)="onSubmit($event)">
+  <quill-editor formControlName="editor">
+    <div quill-editor-toolbar>
+      <span class="ql-formats">
+        <button class="ql-bold" [title]="'Bold'"></button>
+      </span>
+      <span class="ql-formats">
+        <select class="ql-align" [title]="'Aligment'">
+          <option selected></option>
+          <option value="center"></option>
+          <option value="right"></option>
+          <option value="justify"></option>
+        </select>
+        <select class="ql-align" [title]="'Aligment2'">
+          <option selected></option>
+          <option value="center"></option>
+          <option value="right"></option>
+          <option value="justify"></option>
+        </select>
+      </span>
+    </div>
+  </quill-editor>
+  <button type="submit">Submit</button>
+
+</form> -->
+
