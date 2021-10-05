@@ -13,12 +13,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { SharedRoutingModule } from './shared-routing.module';
 
 const materialModules = [
   MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCheckboxModule,
-  MatCardModule, MatSnackBarModule];
+  MatCardModule, MatSnackBarModule, MatRadioModule];
 
 @NgModule({
   declarations: [],

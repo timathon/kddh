@@ -33,8 +33,8 @@ export class SimpleMathComponent implements OnInit, AfterViewInit {
 
   onCheck() {
     const answerCtrl = this.questionForm.get('answer');
-    console.log(answerCtrl?.value);
-    const isCorrect = answerCtrl?.value == this.question.answer;
+    console.log({answser: answerCtrl?.value, key: this.question.answer});
+    const isCorrect = parseInt(answerCtrl?.value) === this.question.answer;
     this.check.emit(isCorrect);
     if (isCorrect) {
       this._snackBar.open('✔️', '', {

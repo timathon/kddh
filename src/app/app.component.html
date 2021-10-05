@@ -12,19 +12,29 @@
   </button>
   <span>KDDH</span>
   <span style="flex: 1 1 auto"></span>
-  <small>20210929-1710</small>
+  <small>20211001-1058</small>
 
 </mat-toolbar>
 
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="over" [(opened)]="opened" (opened)="events.push('open!')"
     (closed)="events.push('closed!')">
     <nav (click)="sidenav.toggle()">
-      <ul>
-        <li><a routerLink="/math" routerLinkActive="active">Math</a></li>
-        <li><a routerLink="/english" routerLinkActive="active">English</a></li>
-        <!-- <li><a routerLink="/second-component" routerLinkActive="active">Second Component</a></li> -->
-      </ul>
+      <div>
+        <a routerLink="/math" routerLinkActive="active">
+          <span class="material-icons">
+            calculate
+            </span>
+        </a>
+      </div>
+      <div>
+        <a routerLink="/english" routerLinkActive="active">
+          <span class="material-icons">
+            font_download
+          </span></a>
+      </div>
+      <!-- <li><a routerLink="/second-component" routerLinkActive="active">Second Component</a></li> -->
+
     </nav>
   </mat-sidenav>
 

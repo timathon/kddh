@@ -1,10 +1,10 @@
 <!-- {{question | json}} -->
 <mat-card>
   <form [formGroup]="questionForm" (ngSubmit)="onCheck()">
-    <button mat-mini-fab type="button" color="primary">{{question.numberA}}</button>
-    <button mat-icon-button type="button" color="accent">{{question.sign}}</button>
-    <button mat-mini-fab type="button" color="primary">{{question.numberB}}</button>
-    <button mat-icon-button type="button" color="accent">=</button>
+    <button class="expression" mat-mini-fab type="button" color="primary">{{question.numberA}}</button>
+    <button class="expression" mat-flat-button type="button">{{question.sign}}</button>
+    <button class="expression" mat-mini-fab type="button" color="primary">{{question.numberB}}</button>
+    <button class="expression" mat-flat-button type="button">=</button>
     <input #answer matInput placeholder="" formControlName="answer">
     <span style="flex: 1 1 auto"></span>
     <button type="submit" mat-raised-button color="primary">check</button>

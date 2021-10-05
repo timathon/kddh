@@ -1,1 +1,22 @@
-<app-simple-math [question]="currentQuestion" (check)="onCheck($event, options)"></app-simple-math>
+<mat-card>
+  <div style="display: flex">
+    <span style="margin: auto">
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="options.method" [disabled]="!!(action$ | async)">
+        <mat-radio-button value="add" color="primary">➕</mat-radio-button>
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <mat-radio-button value="sub" color="primary">➖</mat-radio-button>
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <mat-radio-button value="multiply" color="primary">✖️</mat-radio-button>
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <mat-radio-button value="devide" color="primary">➗</mat-radio-button>
+      </mat-radio-group>
+    </span>
+    <span style="flex: 1 1 auto"></span>
+    <span>
+      <button mat-raised-button color="primary" (click)="action$.next(true)" [disabled]="(action$ | async)">Start</button>
+      <span>&nbsp;&nbsp;</span>
+      <button mat-raised-button color="accent" (click)="action$.next(false)" [disabled]="!(action$ | async)">End</button>
+    </span>
+  </div>
+</mat-card>
+<app-simple-math [question]="currentQuestion" (check)="onCheck($event, options)" *ngIf="action$ | async"></app-simple-math>
