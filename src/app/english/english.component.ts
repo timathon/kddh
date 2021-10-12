@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/data/data.service';
 
 @Component({
   selector: 'app-english',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./english.component.scss']
 })
 export class EnglishComponent implements OnInit {
-
-  constructor() { }
+  quizList = this.data.getList('english');
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
   }

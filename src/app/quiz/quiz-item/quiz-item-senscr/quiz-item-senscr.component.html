@@ -1,0 +1,17 @@
+<h2>Available blocks</h2>
+<div *ngIf="blocks" class="example-list">
+
+  <div id="all" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="blocks" cdkDropListConnectedTo="answer" class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let block of blocks" [cdkDragData]="block" cdkDrag>{{block}}</div>
+  </div>
+</div>
+
+<h2>Answer blocks</h2>
+<div class="example-list">
+
+  <div id="answer" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="answerBlocks" cdkDropListConnectedTo="all" class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let blockx of answerBlocks" cdkDrag [cdkDragData]="blockx">{{blockx}}</div>
+  </div>
+</div>

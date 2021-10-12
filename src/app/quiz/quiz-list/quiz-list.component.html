@@ -1,0 +1,13 @@
+<!-- <p>quiz-list works!</p> -->
+<!-- {{quizList | json}} -->
+
+<mat-selection-list #quizes [multiple]="false" [disabled]="quizStatus.isStarted$ | async"
+  (selectionChange)="quizStatus.quizSelected$.next(quizes.selectedOptions.selected[0]?.value)">
+  <mat-list-option *ngFor="let quiz of quizStatus.quizList$ | async" [value]="quiz.id">
+    {{quiz.title}}
+  </mat-list-option>
+</mat-selection-list>
+
+<!-- <p>
+  Option selected: {{quizes.selectedOptions.selected[0]?.value}}
+</p> -->

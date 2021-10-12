@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { QuizModule } from '../quiz/quiz.module';
+import { SharedModule } from '../shared/shared.module';
 
 import { EnglishRoutingModule } from './english-routing.module';
 import { EnglishComponent } from './english.component';
@@ -10,8 +11,9 @@ import { EnglishComponent } from './english.component';
     EnglishComponent
   ],
   imports: [
-    CommonModule,
-    EnglishRoutingModule
+    EnglishRoutingModule,
+    SharedModule,
+    QuizModule
   ]
 })
 export class EnglishModule { }

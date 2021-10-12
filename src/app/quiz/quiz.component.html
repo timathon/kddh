@@ -1,0 +1,14 @@
+<mat-card>
+
+  <app-quiz-list [quizStatus]="quizStatus"></app-quiz-list>
+  <mat-card style="display: flex">
+    <button mat-raised-button color="primary" [disabled]="(quizStatus.isStarted$ | async) || !(quizStatus.quizSelected$ | async)"
+    (click)="quizStatus.isStarted$.next(true)">开始</button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-raised-button color="accent" [disabled]="!(quizStatus.isStarted$ | async)"
+    (click)="quizStatus.isStarted$.next(false)">结束</button>
+  </mat-card>
+</mat-card>
+<mat-card>
+  <app-quiz-item *ngIf="quizStatus.isStarted$ | async" [quizItem]="quizStatus.currentItem$ | async"></app-quiz-item>
+</mat-card>

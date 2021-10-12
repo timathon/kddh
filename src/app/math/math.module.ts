@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MathRoutingModule } from './math-routing.module';
 import { MathComponent } from './math.component';
@@ -13,7 +12,6 @@ import { SharedModule } from '../shared/shared.module';
     SimpleMathComponent
   ],
   imports: [
-    CommonModule,
     MathRoutingModule,
     SharedModule
   ]

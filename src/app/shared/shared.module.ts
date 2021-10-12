@@ -14,12 +14,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { SharedRoutingModule } from './shared-routing.module';
 
 const materialModules = [
   MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCheckboxModule,
-  MatCardModule, MatSnackBarModule, MatRadioModule];
+  MatCardModule, MatSnackBarModule, MatRadioModule, MatListModule, DragDropModule];
 
 @NgModule({
   declarations: [],
