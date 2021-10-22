@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634872024509,
+  "timestamp": 1634872475974,
   "index": "/kddh/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/kddh/419.da7ec4b8281f0f4252fb.js",
         "/kddh/favicon.ico",
         "/kddh/index.html",
-        "/kddh/main.b01fffca15c8eb90b902.js",
+        "/kddh/main.f21d5b2bc2e4731f12c8.js",
         "/kddh/manifest.webmanifest",
         "/kddh/polyfills.d2c695292774112a06f8.js",
         "/kddh/runtime.09a8ab5e452be2f180ec.js",
@@ -62,8 +62,8 @@
     "/kddh/assets/sounds/correct.mp3": "597f559fed8de40bf06400907a9a2ff6429ebaac",
     "/kddh/assets/sounds/wrong.mp3": "aebc5b4639c03e4d53484bf9ff500e7b99ae4d6c",
     "/kddh/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/kddh/index.html": "b46d8237dcb88e39e4f0af2fb9e9dc8834125817",
-    "/kddh/main.b01fffca15c8eb90b902.js": "1b893c372abdf92e5fc77856c6f70005a7dc96e9",
+    "/kddh/index.html": "d406807676af38b778a44499e4166471a7f3dd1b",
+    "/kddh/main.f21d5b2bc2e4731f12c8.js": "85aba3dfd6aee0f040a131f1cddcb67ccaf9c500",
     "/kddh/manifest.webmanifest": "64eab79faccdf39d67dec218538875b0f2339102",
     "/kddh/polyfills.d2c695292774112a06f8.js": "eb74e5eeaa3197b2317adf5a5ad599345360d91f",
     "/kddh/runtime.09a8ab5e452be2f180ec.js": "94fc6c8eb3f54a0ce29b3f2c8bd43816b85fb4b0",
