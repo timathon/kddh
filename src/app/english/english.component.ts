@@ -8,6 +8,7 @@ import { DataService } from '../shared/data/data.service';
 })
 export class EnglishComponent implements OnInit {
   quizList = this.data.getList('english');
+  quizListz$ = this.data.getListz('english');
   constructor(private data: DataService) { }
 
   ngOnInit(): void {

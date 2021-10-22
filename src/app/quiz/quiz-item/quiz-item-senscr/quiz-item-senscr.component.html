@@ -1,17 +1,60 @@
-<h2>Available blocks</h2>
+<mat-grid-list style="max-width: 30em; margin-bottom: 1em" cdkDropListGroup cols="20" [cdkDropListGroupDisabled]="quizItem2.checked">
+  <mat-grid-tile cdkDropList [cdkDropListData]="i" *ngFor="let item of blocks; let i = index;" [colspan]="5"
+    [rowspan]="3">
+    <div cdkDrag [cdkDragData]="i" (cdkDragEntered)="entered($event)">
+      <div *cdkDragPlaceholder></div>
+      <button mat-raised-button class="example-button" (click)="onButtonClick(i)" [disabled]="quizItem2.checked">
+        <span *ngIf="item[1]">{{item[0]}}</span>
+        <span class="deleted" *ngIf="!item[1]">{{item[0]}}</span>
+      </button>
+      <!-- {{item}} -->
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+<!-- <mat-card>
+  <mat-card-subtitle>MY ANSWER</mat-card-subtitle>
+  <mat-card-title>
+    {{answerSentence}}
+  </mat-card-title>
+  <mat-card-actions style="display: flex">
+    <span style="flex: 1 1 auto"></span><button mat-raised-button color="primary">Check</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<!-- <mat-grid-list cdkDropList [cdkDropListData]="blocks" (cdkDropListDropped)="drop($event)" cols="20">
+  <mat-grid-tile *ngFor="let block of blocks" [cdkDragData]="block" cdkDrag [colspan]="5" [rowspan]="3">
+    <div>
+      <div *cdkDragPlaceholder></div>
+      <button mat-raised-button>{{block}}</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list> -->
+
+
+<!-- <h2>Available blocks</h2>
 <div *ngIf="blocks" class="example-list">
 
-  <div id="all" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="blocks" cdkDropListConnectedTo="answer" class="example-list"
-    (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let block of blocks" [cdkDragData]="block" cdkDrag>{{block}}</div>
+  <div id="all" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="blocks"
+    cdkDropListConnectedTo="answer" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let block of blocks" [cdkDragData]="block" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder>{{block}}</div>
+      {{block}}
+    </div>
   </div>
-</div>
+</div> -->
+
+<!-- 
 
 <h2>Answer blocks</h2>
 <div class="example-list">
 
-  <div id="answer" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="answerBlocks" cdkDropListConnectedTo="all" class="example-list"
-    (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let blockx of answerBlocks" cdkDrag [cdkDragData]="blockx">{{blockx}}</div>
+  <div id="answer" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="answerBlocks"
+    cdkDropListConnectedTo="all" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let blockx of answerBlocks" cdkDrag [cdkDragData]="blockx">
+      <div class="example-custom-placeholder" *cdkDragPlaceholder>{{blockx}}</div>
+      {{blockx}}
+    </div>
   </div>
-</div>
+</div> -->

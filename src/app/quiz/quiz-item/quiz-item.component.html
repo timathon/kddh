@@ -1,1 +1,20 @@
-<app-quiz-item-senscr [quizItem]="quizItem" *ngIf="quizItem.type === 'SenScr'"></app-quiz-item-senscr>
+<mat-card>
+  <app-quiz-item-senscr [currentItemId]="quizStatus.currentItemId$ | async" [quizStatus]="quizStatus" *ngIf="quizItem2.type === 'senScr'"></app-quiz-item-senscr>
+  <mat-divider></mat-divider>
+  <mat-card-subtitle class="subtitle">MY ANSWER</mat-card-subtitle>
+  <mat-card-title>
+    {{quizStatus.currentAnswer$ | async}}
+  </mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-subtitle class="subtitle">KEY</mat-card-subtitle>
+  <mat-card-title [ngStyle]="{'visibility': (!quizItem2.checked) ? 'hidden' : 'inherit'}">
+    {{quizItem2.content}}
+  </mat-card-title>
+  <mat-card-actions style="display: flex">
+    <button *ngIf="quizItem2.checked" mat-button>{{quizItem2.correct ? '✔️': '❌'}}</button>
+    <span style="flex: 1 1 auto"></span><button mat-stroked-button color="primary" (click)="checking.emit(1)"
+      [disabled]="quizItem2.checked" *ngIf="!quizItem2.checked">Check</button>
+    <button mat-stroked-button color="accent" *ngIf="quizItem2.checked && !checkIfFinished()" (click)="goNext.emit()">Next</button>
+    <button mat-raised-button color="accent" *ngIf="checkIfFinished()" (click)="goFinish.emit()">Finish</button>
+  </mat-card-actions>
+</mat-card>

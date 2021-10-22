@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
@@ -16,17 +17,19 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { SharedRoutingModule } from './shared-routing.module';
 
 const materialModules = [
   MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCheckboxModule,
-  MatCardModule, MatSnackBarModule, MatRadioModule, MatListModule, DragDropModule];
+  MatCardModule, MatSnackBarModule, MatRadioModule, MatListModule, DragDropModule, MatGridListModule];
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    HttpClientModule,
     SharedRoutingModule,
     FormsModule,
     QuillModule.forRoot(),

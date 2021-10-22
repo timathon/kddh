@@ -1,13 +1,20 @@
 <!-- <p>quiz-list works!</p> -->
 <!-- {{quizList | json}} -->
 
-<mat-selection-list #quizes [multiple]="false" [disabled]="quizStatus.isStarted$ | async"
+<mat-selection-list class="quiz-list" #quizes [multiple]="false" [disabled]="quizStatus.isStarted$ | async"
   (selectionChange)="quizStatus.quizSelected$.next(quizes.selectedOptions.selected[0]?.value)">
-  <mat-list-option *ngFor="let quiz of quizStatus.quizList$ | async" [value]="quiz.id">
-    {{quiz.title}}
-  </mat-list-option>
+  <ng-container *ngIf="quizStatus.quizList$ | async; else loading">
+    <ng-container *ngFor="let quiz of quizStatus.quizList$ | async">
+      <mat-list-option [value]="quiz.id"
+        *ngIf="!(quizStatus.isStarted$.getValue() && quiz.id != quizStatus.quizSelected$.getValue())">
+        {{quiz.book}} {{quiz.module}} {{quiz.type}}
+        <!-- {{quiz | json}} -->
+      </mat-list-option>
+    </ng-container>
+  </ng-container>
 </mat-selection-list>
 
+<ng-template #loading>Loading...</ng-template>
 <!-- <p>
   Option selected: {{quizes.selectedOptions.selected[0]?.value}}
 </p> -->
