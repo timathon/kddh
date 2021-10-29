@@ -1,0 +1,31 @@
+<form [formGroup]="quizSelected">
+  <mat-form-field style="width: 20vw">
+    <mat-label>教材</mat-label>
+    <mat-select formControlName="book">
+      <mat-option *ngFor="let book of books" [value]="book">
+        {{book}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span>&nbsp;</span>
+  <mat-form-field style="width: 20vw">
+    <mat-label>模块</mat-label>
+    <mat-select formControlName="module">
+      <mat-option *ngFor="let module of modules" [value]="module">
+        {{module}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span>&nbsp;</span>
+  <mat-form-field style="width: 20vw">
+    <mat-label>测试</mat-label>
+    <mat-select formControlName="quiz">
+      <mat-option *ngFor="let quiz of quizes" [value]="quiz.id">
+        {{quiz.type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- {{list | json}} -->
+</form>
+

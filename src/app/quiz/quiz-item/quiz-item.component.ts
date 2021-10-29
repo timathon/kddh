@@ -7,6 +7,7 @@ import { Component, Input, OnInit, EventEmitter, ChangeDetectionStrategy, Output
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuizItemComponent implements OnInit {
+  @Input() currentQuizItem: any;
   quizItem2: any;
   @Input() quizStatus!: any;
   @Input() currentItemId!: any;
@@ -27,8 +28,8 @@ export class QuizItemComponent implements OnInit {
 
   checkIfFinished() {
     const currentItemId = this.quizStatus.currentItemId$.getValue();
-    const quizLength = this.quizStatus.quizItems$.getValue().length;
-    const checked = this.quizItem2.checked;
+    const quizLength = this.quizStatus.quizItems2.length;
+    const checked = this.currentQuizItem.checked;
     const finished = checked && (currentItemId + 1 == quizLength);
     return finished;
   }

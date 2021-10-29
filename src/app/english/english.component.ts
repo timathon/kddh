@@ -7,8 +7,7 @@ import { DataService } from '../shared/data/data.service';
   styleUrls: ['./english.component.scss']
 })
 export class EnglishComponent implements OnInit {
-  quizList = this.data.getList('english');
-  quizListz$ = this.data.getListz('english');
+  quizListz1$ = this.data.getListz1('english');
   constructor(private data: DataService) { }
 
   ngOnInit(): void {

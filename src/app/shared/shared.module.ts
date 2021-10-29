@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { QuillModule } from 'ngx-quill';
+import { FlexModule } from '@angular/flex-layout';
+// import { QuillModule } from 'ngx-quill';
 
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,12 +19,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
 
 import { SharedRoutingModule } from './shared-routing.module';
 
 const materialModules = [
   MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCheckboxModule,
-  MatCardModule, MatSnackBarModule, MatRadioModule, MatListModule, DragDropModule, MatGridListModule];
+  MatCardModule, MatSnackBarModule, MatRadioModule, MatListModule, DragDropModule, MatGridListModule,
+  MatSelectModule];
 
 @NgModule({
   declarations: [],
@@ -32,7 +35,8 @@ const materialModules = [
     HttpClientModule,
     SharedRoutingModule,
     FormsModule,
-    QuillModule.forRoot(),
+    FlexModule,
+    // QuillModule.forRoot(),
     ReactiveFormsModule,
     [...materialModules]
 
@@ -40,7 +44,8 @@ const materialModules = [
   exports: [
     CommonModule,
     FormsModule,
-    QuillModule,
+    FlexModule,
+    // QuillModule,
     ReactiveFormsModule,
     [...materialModules]
 

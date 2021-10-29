@@ -1,9 +1,12 @@
-<mat-grid-list style="max-width: 30em; margin-bottom: 1em" cdkDropListGroup cols="20" [cdkDropListGroupDisabled]="quizItem2.checked">
+<mat-grid-list style="max-width: 30em; margin-bottom: 1em" cdkDropListGroup cols="20"
+  [cdkDropListGroupDisabled]="currentQuizItem.checked">
   <mat-grid-tile cdkDropList [cdkDropListData]="i" *ngFor="let item of blocks; let i = index;" [colspan]="5"
-    [rowspan]="3">
-    <div cdkDrag [cdkDragData]="i" (cdkDragEntered)="entered($event)">
+     [rowspan]="3">
+    <div cdkDrag [cdkDragData]="i" 
+    (cdkDragDropped)="drop($event)"
+>
       <div *cdkDragPlaceholder></div>
-      <button mat-raised-button class="example-button" (click)="onButtonClick(i)" [disabled]="quizItem2.checked">
+      <button mat-raised-button class="example-button" (click)="onButtonClick(i)" [disabled]="currentQuizItem.checked">
         <span *ngIf="item[1]">{{item[0]}}</span>
         <span class="deleted" *ngIf="!item[1]">{{item[0]}}</span>
       </button>
@@ -12,6 +15,25 @@
   </mat-grid-tile>
 
 </mat-grid-list>
+
+<!-- <div fxLayout="row wrap" fxLayoutGap="16px grid" cdkDropListGroup>
+  <div
+    *ngFor="let item of blocks; let i = index"
+    fxFlex.gt-sm="25"
+    [fxFlex.gt-xs]="100 / 3"
+    fxFlex="50"
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    [cdkDropListData]="i"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <mat-card cdkDrag>
+      <mat-card-title>{{ item }}</mat-card-title>
+      <mat-card-subtitle>Hello world</mat-card-subtitle>
+    </mat-card>
+  </div>
+</div> -->
+
 
 <!-- <mat-card>
   <mat-card-subtitle>MY ANSWER</mat-card-subtitle>

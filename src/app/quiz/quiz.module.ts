@@ -4,6 +4,7 @@ import { QuizComponent } from './quiz.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { QuizItemComponent } from './quiz-item/quiz-item.component';
 import { QuizItemSenscrComponent } from './quiz-item/quiz-item-senscr/quiz-item-senscr.component';
+import { QuizListEnglishComponent } from './quiz-list/quiz-list-english/quiz-list-english.component';
 
 
 
@@ -12,7 +13,8 @@ import { QuizItemSenscrComponent } from './quiz-item/quiz-item-senscr/quiz-item-
     QuizComponent,
     QuizListComponent,
     QuizItemComponent,
-    QuizItemSenscrComponent
+    QuizItemSenscrComponent,
+    QuizListEnglishComponent,
   ],
   imports: [
     SharedModule

@@ -1,16 +1,23 @@
 <mat-card>
-
   <app-quiz-list [quizStatus]="quizStatus"></app-quiz-list>
-  <mat-card style="display: flex">
-    <button mat-raised-button color="primary"
-      [disabled]="(quizStatus.isStarted$ | async) || !(quizStatus.quizSelected$ | async)"
-      (click)="quizStatus.isStarted$.next(true)">开始</button>
+  <button mat-raised-button color="primary"
+    *ngIf="!(quizStatus.isStarted$ | async)"
+    [disabled]="!(quizStatus.quizSelected$ | async)"
+    (click)="quizStatus.isStarted$.next(true)">开始</button>
+  <button mat-raised-button color="accent" *ngIf="(quizStatus.isStarted$ | async)"
+    (click)="quizStatus.isStarted$.next(false)">结束</button>
+  <!-- <mat-card style="display: flex">
     <span style="flex: 1 1 auto"></span>
-    <button mat-raised-button color="accent" [disabled]="!(quizStatus.isStarted$ | async)"
+    <button mat-raised-button color="primary"
+      *ngIf="!(quizStatus.isStarted$ | async) || !(quizStatus.quizSelected$ | async)"
+      (click)="quizStatus.isStarted$.next(true)">开始</button>
+    <button mat-raised-button color="accent" *ngIf="(quizStatus.isStarted$ | async)"
       (click)="quizStatus.isStarted$.next(false)">结束</button>
-  </mat-card>
+  </mat-card> -->
 </mat-card>
 <mat-card>
-  <app-quiz-item *ngIf="quizStatus.isStarted$ | async" [currentItemId]="quizStatus.currentItemId$ | async" [quizStatus]="quizStatus"
+  <app-quiz-item *ngIf="(quizStatus.isStarted$ | async) && currentQuizItem"
+  [currentQuizItem]="currentQuizItem"
+  [currentItemId]="quizStatus.currentItemId$ | async" [quizStatus]="quizStatus"
     (checking)="onCheck($event)" (goNext)="onNext()" (goFinish)="onFinish()"></app-quiz-item>
 </mat-card>

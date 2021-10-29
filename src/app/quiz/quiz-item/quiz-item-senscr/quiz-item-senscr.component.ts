@@ -8,6 +8,8 @@ import { CdkDragEnter, CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag 
 })
 export class QuizItemSenscrComponent implements OnInit {
   quizItem2: any;
+  @Input() currentQuizItem: any;
+
   @Input() quizStatus!: any;
   @Input() currentItemId!: any;
 
@@ -24,11 +26,11 @@ export class QuizItemSenscrComponent implements OnInit {
   }
 
   ngOnChanges() {
-    this.quizItem2 = this.quizStatus.quizItems$.getValue()[this.quizStatus.currentItemId$.getValue()];
-    console.log({
-      q2: this.quizItem2
-    })
-    this.blocks = this.prepareBlocks(this.quizItem2.content, this.quizItem2.noise);
+    // this.quizItem2 = this.quizStatus.quizItems$.getValue()[this.quizStatus.currentItemId$.getValue()];
+    // console.log({
+    //   q2: this.quizItem2
+    // })
+    this.blocks = this.prepareBlocks(this.currentQuizItem.content, this.currentQuizItem.noise);
     this.answerSentence = this.formSenence(this.blocks);
   }
 
@@ -59,6 +61,13 @@ export class QuizItemSenscrComponent implements OnInit {
 
   entered(event: CdkDragEnter) {
     moveItemInArray(this.blocks, event.item.data, event.container.data);
+    this.answerSentence = this.formSenence(this.blocks);
+  }
+
+  drop(event: CdkDragDrop<number>): void {
+    moveItemInArray(
+      this.blocks, event.item.data, event.container.data
+    );
     this.answerSentence = this.formSenence(this.blocks);
   }
 
