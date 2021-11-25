@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1637812167576,
+  "timestamp": 1637813087980,
   "index": "/kddh/index.html",
   "assetGroups": [
     {
@@ -12,13 +12,13 @@
       },
       "urls": [
         "/kddh/244.c805f985f6509e931dd8.js",
-        "/kddh/4.424ef17bc890ea148be8.js",
+        "/kddh/4.47b1c49f8b06a36fa76d.js",
         "/kddh/favicon.ico",
         "/kddh/index.html",
         "/kddh/main.3bc8296b0aa1a36f09f9.js",
         "/kddh/manifest.webmanifest",
         "/kddh/polyfills.d2c695292774112a06f8.js",
-        "/kddh/runtime.b675a451665f0f1099fd.js",
+        "/kddh/runtime.19cfc4925292eb3034fb.js",
         "/kddh/styles.46c06a250979b397ce72.css"
       ],
       "patterns": []
@@ -48,7 +48,7 @@
   "dataGroups": [],
   "hashTable": {
     "/kddh/244.c805f985f6509e931dd8.js": "815a91eee1f959ba850bc82a8bbe71ba3e696370",
-    "/kddh/4.424ef17bc890ea148be8.js": "07e87b64a827bdebe7b64658b845095444924fb4",
+    "/kddh/4.47b1c49f8b06a36fa76d.js": "5c74775c95cf205fa55c8aedd7af73506e1c7386",
     "/kddh/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/kddh/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/kddh/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -60,11 +60,11 @@
     "/kddh/assets/sounds/correct.mp3": "597f559fed8de40bf06400907a9a2ff6429ebaac",
     "/kddh/assets/sounds/wrong.mp3": "aebc5b4639c03e4d53484bf9ff500e7b99ae4d6c",
     "/kddh/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/kddh/index.html": "6905839b35b59be0cda2da1312702e199ef6ed0a",
+    "/kddh/index.html": "f4a91f5c7a98dc3c471da91e9466d69991c8cffc",
     "/kddh/main.3bc8296b0aa1a36f09f9.js": "82b4b9d237f055d807cc8aeb974a05a5c93257ab",
     "/kddh/manifest.webmanifest": "64eab79faccdf39d67dec218538875b0f2339102",
     "/kddh/polyfills.d2c695292774112a06f8.js": "eb74e5eeaa3197b2317adf5a5ad599345360d91f",
-    "/kddh/runtime.b675a451665f0f1099fd.js": "0e4d872bdbd5da7003c3909fd0a282bcb35ee761",
+    "/kddh/runtime.19cfc4925292eb3034fb.js": "cb7cae74c1850ce8aeaf7b8542bf101923c86f48",
     "/kddh/styles.46c06a250979b397ce72.css": "0b1913828de7bcabbe13fa0fe4e720a955b4937b"
   },
   "navigationUrls": [
